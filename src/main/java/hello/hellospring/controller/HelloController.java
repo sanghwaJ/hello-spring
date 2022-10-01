@@ -43,11 +43,11 @@ public class HelloController {
         return hello;
     }
 
-
     static class Hello {
         private String name;
 
-        private String getName() {
+        // command + enter로 getter, setter 생성
+        public String getName() {
             return name;
         }
 
