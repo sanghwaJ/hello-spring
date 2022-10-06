@@ -27,14 +27,14 @@ class MemberServiceTest {
 
     @Test
     void 회원가입() {
-        // given
+        // given (상황이 주어졌을 때)
         Member member = new Member();
         member.setName("hello");
 
-        // when
+        // when (검증 테스트)
         Long saveId = memberService.join(member);
 
-        // then
+        // then (이러한 결과가 나와야 함)
         Member findMember = memberService.findOne(saveId).get();
         assertThat(member.getName()).isEqualTo(findMember.getName());
     }
